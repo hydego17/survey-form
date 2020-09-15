@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Survey Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="title" class="text-center">Praim.Co Customer Satisfaction Survey Form</h1>
+            <p id="description" class="description text-center">
+                *Please take a moment to fill this survey. This helps us a lot ehe!
+            </p>
+        </header>
+        <form id="survey-form">
+            <div class="form-group">
+                <label id="name-label" for="name">Name</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Alias is fine!" required />
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="We might inform u our new menus so dont worry hehe xD"
+                    required />
+            </div>
+            <div class="form-group">
+                <label id="number-label" for="number">Age<span class="clue">(optional)</span></label>
+                <input type="number" name="age" id="number" min="10" max="99" class="form-control" placeholder="Why do we need ur age?" />
+            </div>
+            <div class="form-group">
+                <p>Which option best describes your current role?</p>
+                <select id="dropdown" name="role" class="form-control" required>
+                    <option disabled selected value>Select current role</option>
+                    <option value="student">Ninja</option>
+                    <option value="job">Spy Agent</option>
+                    <option value="learner"> Kungfu Cat</option>
+                    <option value="preferNo">Prefer not to say</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <p>How did you hear about our company?</p>
+                <label>
+                    <input name="user-recommend" value="social-media" type="radio" class="input-radio"
+                        checked />Social Media</label>
+                <label>
+                    <input name="user-recommend" value="advertising" type="radio" class="input-radio" />Advertising</label>
+
+                <label><input name="user-recommend" value="search-engine" type="radio" class="input-radio" />Search Engine</label>
+
+                <label><input name="user-recommend" value="search-engine" type="radio" class="input-radio"/>
+                <input type="text" placeholder="other" id="other-source" name="other" ></label>
+            </div>
+
+            <div class="form-group">
+                <p>
+                    What is your favorite product of Praim.Co?
+                </p>
+                <select id="most-like" name="mostLike" class="form-control" required>
+                    <option disabled selected value>Select an option</option>
+                    <option value="c-bread"> Chocho-Bread</option>
+                    <option value="c-corn">Chocho-Corn</option>
+                    <option value="b-float">Banana Float (No chocho)</option>
+                    <option value="gt-latte">Green-tea Latte</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <p>
+                    What would you like to see improved?
+                    <span class="clue">(Check all that apply)</span>
+                </p>
+
+                <label><input name="prefer" value="taste" type="checkbox"
+                        class="input-checkbox" />Taste</label>
+                <label>
+                    <input name="prefer" value="portion" type="checkbox" class="input-checkbox" />Portion</label>
+                <label><input name="prefer" value="packaging" type="checkbox" class="input-checkbox" />Packaging</label>
+                <label><input name="prefer" value="order-time" type="checkbox"
+                        class="input-checkbox" />Order time</label>
+                <label><input name="prefer" value="service" type="checkbox" class="input-checkbox" />Service</label>
+                <label><input name="prefer" value="more-menus" type="checkbox" class="input-checkbox" />More menus!</label>
+                <label><input name="prefer" value="hygiene" type="checkbox" class="input-checkbox" />Hygiene</label>
+                <label><input name="prefer" value="topping" type="checkbox"
+                        class="input-checkbox" />More topping bonus!</label>
+            </div>
+
+            <div class="form-group">
+                <p>Any comments or suggestions?</p>
+                <textarea id="comments" class="input-textarea" name="comment"
+                    placeholder="Enter your comment here..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
